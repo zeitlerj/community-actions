@@ -1,0 +1,31 @@
+{
+  "meta": "Exported from https://atlasbot.xyz",
+  "flags": {
+    "ttl": 0,
+    "cooldown": 0,
+    "enabled": true,
+    "silent": false,
+    "delete": false,
+    "quiet": false
+  },
+  "restrictions": {
+    "mode": "blacklist",
+    "roles": [],
+    "channels": [],
+    "permissions": []
+  },
+  "trigger": {
+    "type": "interval",
+    "content": "60000"
+  },
+  "content": [
+    {
+      "fallback": true,
+      "type": "channel",
+      "message": "{if;{perget;EconomyEnabled};==;true;\n  {if;{perget;EconomyPotEnabled};==;true;\n    {if;{perget;EconomyPotCountdown};==;0;\n  \t\t{set;potValue;{range;0;{perget;EconomyPotIncrement}}}\n  \t\t{perset;EconomyPot;{math;{perget;EconomyPot}+{get;potValue}}}\n      \t{perset;EconomyPotCountdown;{perget;EconomyPotFrequency}}\n    \t{if;{get;potValue};!=;0;{get;potValue}{perget;EconomyCurrency} added to the pot. Value is now {perget;EconomyPot}{perget;EconomyCurrency}.\n          };\n      \t{perset;EconomyPotCountdown;{math;{perget;EconomyPotCountdown}-1}}\n      }\n  }\n}",
+      "channel": "591483033358696448",
+      "id": "5d9219a02bd115001db2188f"
+    }
+  ],
+  "formatVersion": "1.2"
+}
