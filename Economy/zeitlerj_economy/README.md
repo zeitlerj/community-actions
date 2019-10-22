@@ -3,7 +3,7 @@
 Zeitlerj's Economy Superaction provides a powerful and customizable economy system for atlas users. 
 
 ### Included features are:
-* **Customizable Suffix** Default setting is `cR`, can be changed using subcommands to any desired suffix, including emojis.
+* **Customizable Currency Suffix** Default setting is `cR`, can be changed using subcommands to any desired suffix, including emojis.
 * **Time Based Pot** Provides a timed reward system for users to earn money over time.
 * **Level Up Rewards** Provided code-bit can be inserted into any existing level up message.
 * **Interuser Payments** Allows users to pay each other
